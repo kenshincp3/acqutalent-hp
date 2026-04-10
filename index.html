@@ -616,15 +616,28 @@
     .value-item {
       padding: 2.5rem;
       border-right: 1px solid rgba(255,255,255,0.08);
+      position: relative;
     }
 
     .value-item:last-child { border-right: none; }
 
+    .value-num {
+      font-family: var(--en);
+      font-size: 4rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
     .value-item h3 {
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 1rem;
       line-height: 1.5;
+      padding-left: 1rem;
+      border-left: 2px solid var(--accent);
     }
 
     .value-item p {
@@ -783,10 +796,15 @@
       .pain-list { grid-template-columns: 1fr 1fr; }
       .pain-item { border-right: none; border-bottom: 1px solid var(--light); }
       .service-row { grid-template-columns: 1fr; }
-      .service-row-visual { min-height: 120px; }
-      .service-row-visual .big-num { font-size: 5rem; }
+      .service-row-visual { display: none; }
+      .service-num {
+        font-size: 2.5rem !important;
+        font-weight: 900 !important;
+        color: var(--lighter) !important;
+        letter-spacing: -0.03em !important;
+        margin-bottom: 0.75rem !important;
+      }
       .service-row:nth-child(even) .service-row-text { order: 1; }
-      .service-row:nth-child(even) .service-row-visual { order: 2; }
       .works-grid { grid-template-columns: 1fr; }
       .about { grid-template-columns: 1fr; }
       .about-photo { min-height: 300px; }
@@ -1005,16 +1023,19 @@
       <h2 class="section-title rv rv-d1">大切にしていること</h2>
       <div class="value-grid">
         <div class="value-item rv">
+          <div class="value-num">01</div>
           <h3>動くまでやる</h3>
-          <p>提案書を出して終わりにしません。導入して、実際に業務で使えるようになるまで、隣で一緒にやります。</p>
+          <p>導入して、実際に業務で使えるようになるまで、隣で一緒にやります。</p>
         </div>
         <div class="value-item rv rv-d1">
-          <h3>本当に効くところだけ</h3>
-          <p>全部をAIにする必要はありません。御社の業務を見て、本当に効果があるところだけ提案します。</p>
+          <div class="value-num">02</div>
+          <h3>効くところだけやる</h3>
+          <p>全部をAIにする必要はありません。御社の業務を見て、本当に効果があるところだけ。</p>
         </div>
         <div class="value-item rv rv-d2">
+          <div class="value-num">03</div>
           <h3>小さく始める</h3>
-          <p>全社導入はしません。まず1つの業務から。成果が出たら次に広げる。無理のないペースで進めます。</p>
+          <p>まず1つの業務から。成果が出たら次に広げる。無理のないペースで。</p>
         </div>
       </div>
     </div>
