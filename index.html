@@ -487,59 +487,33 @@
       color: var(--dark);
     }
 
-    /* ====== ABOUT — large photo ====== */
+    /* ====== ABOUT ====== */
     .about {
-      display: grid;
-      grid-template-columns: 5fr 6fr;
-      min-height: 80vh;
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .about-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-profile {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
     }
 
     .about-photo {
-      background: var(--off-white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      font-size: 0.85rem;
-      position: relative;
-      overflow: hidden;
+      flex-shrink: 0;
     }
 
     .about-photo img {
-      width: 180px;
-      height: 180px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-photo .about-circle {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,107,0,0.1);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .about-photo .about-graphic {
-      font-family: var(--en);
-      font-size: clamp(6rem, 12vw, 12rem);
-      font-weight: 900;
-      color: rgba(255,107,0,0.03);
-      letter-spacing: -0.03em;
-      user-select: none;
-      position: absolute;
-    }
-
-    .about-content {
-      padding: 5rem 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .about-name {
@@ -551,7 +525,13 @@
     .about-title {
       font-size: 0.78rem;
       color: var(--mid);
-      margin-bottom: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-intro {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.8;
     }
 
     .about-text {
@@ -563,7 +543,7 @@
 
     .about-career {
       padding: 1.5rem 2rem;
-      background: var(--off-white);
+      background: var(--white);
       border-radius: 8px;
     }
 
@@ -806,9 +786,8 @@
       }
       .service-row:nth-child(even) .service-row-text { order: 1; }
       .works-grid { grid-template-columns: 1fr; }
-      .about { grid-template-columns: 1fr; }
-      .about-photo { min-height: 300px; }
-      .about-content { padding: 3rem 2rem; }
+      .about-profile { flex-direction: column; text-align: center; gap: 1.5rem; }
+      .about-photo img { width: 120px; height: 120px; }
       .value-grid { grid-template-columns: 1fr; }
       .value-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
       .form-row { grid-template-columns: 1fr; }
@@ -988,30 +967,34 @@
     </div>
   </section>
 
-  <!-- ABOUT — large split -->
+  <!-- ABOUT -->
   <section class="about" id="about">
-    <div class="about-photo">
-      <div class="about-graphic">KA</div>
-      <div class="about-circle"></div>
-      <img src="images/profile.png" alt="新井 謙伸">
-    </div>
-    <div class="about-content">
-      <div class="section-label rv">Representative</div>
-      <div class="about-name rv rv-d1">新井 謙伸</div>
-      <div class="about-title rv rv-d1">アクタレント株式会社 代表取締役</div>
-      <p class="about-text rv rv-d2">
-        中小企業の社長の隣で、AIが業務で動くまで一緒にやる会社です。<br><br>
-        「何から始めればいいかわからない」を、一緒に整理して、実装して、動くところまで。
-        御社に来て、隣で、動くまでやります。
-      </p>
-      <div class="about-career rv rv-d3">
-        <h4>Career</h4>
-        <ul>
-          <li>リクルートにて法人営業を経験</li>
-          <li>2024年 アクタレント株式会社を設立</li>
-          <li>金融機関向けシステム開発・LINE構築を手がける</li>
-          <li>中小企業向けAI導入・業務改善・HP改善を支援中</li>
-        </ul>
+    <div class="container">
+      <div class="about-inner">
+        <div class="section-label rv">Representative</div>
+        <div class="about-profile rv rv-d1">
+          <div class="about-photo">
+            <img src="images/profile.png" alt="新井 謙伸">
+          </div>
+          <div>
+            <div class="about-name">新井 謙伸</div>
+            <div class="about-title">アクタレント株式会社 代表取締役</div>
+            <p class="about-intro">中小企業の社長の隣で、AIが業務で動くまで一緒にやる会社です。</p>
+          </div>
+        </div>
+        <p class="about-text rv rv-d2">
+          「何から始めればいいかわからない」を、一緒に整理して、実装して、動くところまで。
+          御社に来て、隣で、動くまでやります。
+        </p>
+        <div class="about-career rv rv-d3">
+          <h4>Career</h4>
+          <ul>
+            <li>リクルートにて法人営業を経験</li>
+            <li>2024年 アクタレント株式会社を設立</li>
+            <li>金融機関向けシステム開発・LINE構築を手がける</li>
+            <li>中小企業向けAI導入・業務改善・HP改善を支援中</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
