@@ -1100,5 +1100,17 @@
     });
   </script>
 
+  <script>
+  fetch("https://script.google.com/macros/s/AKfycbwmeoqG1YfpmpmdrdL5uujwgbgjBwCXVk1Rzc468xj-sIKO1LJbeg30qA2-poDCvKOWWw/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      page: location.pathname,
+      company: "acqutalent",
+      device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? "スマホ" : "PC",
+      ua: navigator.userAgent
+    })
+  }).catch(function(){});
+  </script>
+
 </body>
 </html>
