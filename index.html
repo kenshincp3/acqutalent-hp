@@ -48,10 +48,14 @@
     }
 
     header.scrolled {
-      background: rgba(255,255,255,0.96);
+      background: rgba(26,26,26,0.95);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--light);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
+
+    header.scrolled .logo { color: var(--white); }
+    header.scrolled nav a { color: rgba(255,255,255,0.6); }
+    header.scrolled nav a:hover { color: var(--white); }
 
     .header-inner {
       max-width: 1100px;
